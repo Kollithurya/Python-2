@@ -1,0 +1,245 @@
+today class :  '''
+
+Dictionary:
+
+    it is used to store a collection of data items in key and value pairs.
+
+    we can define dictionary with curly braces.
+
+d={key:value,key:value...}
+
+for example:
+
+cric={1:'sachin',2:'dhoni',3:'kohli',4:'rohit',5:'yuvraj'}
+
+print(cric)#display all the items of dictionary
+
+print(cric[2])#it will display value of the key-2
+
+print(cric[5])#it will display value of the key-2
+
+#week days program
+
+week={1:'sunday',2:'monday',3:'tuesday',4:'wednesday',5:'Thursday',6:'Friday',7:'saturday'}
+
+x=int(input('Enter week day'))
+
+print(week[x])
+
+#write a program to assign ranks to students
+
+ranks={}#empty dictionary
+
+n=int(input('Enter no of students'))
+
+for i in range(1,n+1):
+
+    r=int(input('enter rank'))
+
+    name=input('Enter student name')
+
+    ranks[r]=name#dic[key]=value,here key is rank,value is student name
+
+r=int(input('Enter rank'))
+
+print(ranks[r])
+
+  
+
+list:it stores any type of data and also it allows duplicate data.
+
+    we can modify the data in a list.mutable.
+
+    []-square brackets
+
+    
+
+    tuple:it stores any type of data and also it allows duplicate data.
+
+    we can not modify the data.immutable.
+
+    ()-rounded brackets
+
+    
+
+    set:set does not allow duplicate data.
+
+    {}-curly braces
+
+    {1,2,3,4}
+
+    '''
+
+'''
+
+enter player no:23
+
+player name:sachin
+
+number of matches:450
+
+runs:15000
+
+wickets:356
+
+            
+
+#static intialization:when you intialize the data into dictionary before
+
+#compiling the program
+
+         # 0      1    2    3
+
+d={23:['sachin',450,15000,356],66:['kohli',312,12000,121],12:['dhoni',398,13000,50]}
+
+print('Player name:',d[12][0])
+
+print('Number of matches:',d[12][1])
+
+print('Runs:',d[12][2])
+
+print('Wickets:',d[12][3])
+
+ind={}
+
+n=int(input("Enter no of players:"))
+
+for i in range(1,n+1):
+
+    l=[]
+
+    pno=int(input('Enter player number:'))
+
+    pname=input('Enter player name')
+
+    matches=int(input('Enter no of matches'))
+
+    runs=int(input('How many runs scored'))
+
+    wickets=int(input('How wickets taken'))
+
+    l.append(pname)
+
+    l.append(matches)
+
+    l.append(runs)
+
+    l.append(wickets)
+
+    ind[pno]=l#here pno is the key and list l is the value
+
+print(ind)
+
+pno=int(input('Enter player number for details'))
+
+print('Player name:',ind[pno][0]
+
+print('Number of matches:',ind[pno][1])
+
+print('Runs:',ind[pno][2])
+
+print('Wickets:',ind[pno][3])
+
+#get(key)->this method used to get the value based on the key
+
+s={1:100,2:2000,3:3000,4:5000}
+
+ #  k  v k   v   k  v   k   v
+
+print(s[3])
+
+print(s.get(4))
+
+  
+
+you have to prepare student dictionary
+
+    
+
+st={1:['satish','mpcs','adckkd',12345,-}
+
+d={12:['sachin',100],34:'dhoni',45:'kohli'}
+
+print(d)
+
+pno=int(input('Enter player number'))
+
+print(d.get(pno)[0])
+
+print(d.get(pno)[1])
+
+'''
+
+ind={}
+
+n=int(input("Enter no of players:"))
+
+for i in range(1,n+1):
+
+    l=[]
+
+    pno=int(input('Enter player number:'))
+
+    pname=input('Enter player name')
+
+    matches=int(input('Enter no of matches'))
+
+    runs=int(input('How many runs scored'))
+
+    wickets=int(input('How wickets taken'))
+
+    l.append(pname)
+
+    l.append(matches)
+
+    l.append(runs)
+
+    l.append(wickets)
+
+    ind[pno]=l#here pno is the key and list l is the value
+
+print(ind)
+
+pno=int(input('Enter player number for details'))
+
+print('Player name:',ind.get(pno)[0])
+
+print('Number of matches:',ind.get(pno)[1])
+
+print('Runs:',ind.get(pno)[2])
+
+print('Wickets:',ind.get(pno)[3])
+
+'''
+
+assignment1:
+
+    write a program to create player dictionary
+
+    (note:read the pno and pname at the time of runtime)
+
+assignment2:
+
+    write a program to prepare student dictionary
+
+    (note:sno,sname,group,college branch,phone number)
+
+ex:
+
+    enter student no:2
+
+output:
+
+    sname:ramesh
+
+    group:mpcs
+
+    college:adckkd
+
+    phone number:12356
+
+assignment3:
+
+    write a program to print biggest of three numbers
+
+'''
