@@ -1,0 +1,213 @@
+Today class and Assignments:'''
+
+PYTHON
+
+PYTHON IS OBJECT ORIENTED PROGRAMMING LANGUAGE
+
+OBJECT ORIENTED PL IS AN APPROACH WHICH IS USED TO SOLVE
+
+A PROGRAM WITH CLASSES AND OBJECTS
+
+class:
+
+    a collection of data variables and methods
+
+    or
+
+    a collection of objects
+
+class Simple:
+
+    def hi(self):
+
+        print("Hello World")
+
+x=Simple()
+
+x.hi()
+
+#write a program to print your name n times using class
+
+class Nameprogram:
+
+    def printname(self,n):
+
+        for i in range(1,n+1):
+
+            print('aditya',end=' ')
+
+n=int(input())#5
+
+na=Nameprogram()#obj=classname()
+
+na.printname(n)
+
+#write a program to print arithmetic operations
+
+class Arithmetic:
+
+    def addition(self,a,b):
+
+        print('adding of two numbers:',a+b)
+
+    def substraction(self,a,b):
+
+        print('substraction of two numbers',a-b)
+
+    def multiplication(self,a,b):
+
+         print('multiplication of two numbers',a*b)
+
+    def division(self,a,b):
+
+         print('division of two numbers',a/b)
+
+ar=Arithmetic()
+
+a=int(input())
+
+b=int(input())
+
+ar.addition(a,b)
+
+ar.division(a,b)
+
+#write a program to print arithmetic operations
+
+class Arithmetic:
+
+    def addition(self,a,b):
+
+        return a+b
+
+    def substraction(self,a,b):
+
+        return a-b
+
+    def multiplication(self,a,b):
+
+         return a*b
+
+    def division(self,a,b):
+
+         return a/b
+
+ar=Arithmetic()
+
+a=int(input())
+
+b=int(input())
+
+add=ar.addition(a,b)
+
+print('addition of a,b:',add)
+
+div=ar.division(a,b)
+
+print('division of a,b:',div)
+
+#check the prime number or not program using class
+
+class Solution:
+
+    def primecheck(self,n):
+
+        #code write here
+
+        if n<2:
+
+            return False
+
+        for i in range(2,n):
+
+            if n%i==0:
+
+                return False
+
+        return True
+
+n=int(input())
+
+s=Solution()
+
+if s.primecheck(n):
+
+    print('yes')
+
+else:
+
+    print('no')
+
+'''
+
+#write a program to print 1 to n prime numbers using class
+
+import math
+
+class Solution:
+
+    def primecheck(self,n):
+
+        #code write here
+
+        x=int(math.sqrt(n))
+
+        if n<2:
+
+            return False
+
+        for i in range(2,x):
+
+            if n%i==0:
+
+                return False
+
+        return True
+
+   
+
+n=int(input())
+
+s=Solution()
+
+c=0
+
+for i in range(1,n+1):
+
+    if s.primecheck(i):
+
+        c=c+1
+
+print(c)
+
+        
+
+Time complexity:
+
+    how much time taken to run this program
+
+    seive al
+
+    prefix
+
+    bitmanipulation
+
+    binary search
+
+    bfs
+
+    stack
+
+    dfs
+
+assignments1:
+
+    write a program to print given year is leap year or not using class
+
+assignments2:
+
+    write a program to print given number is palindrome or not using class
+
+assignment3:
+
+    write a program to print n febnocci series using class
