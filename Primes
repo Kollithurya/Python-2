@@ -1,0 +1,63 @@
+Assignments:
+
+Write a program to print prime number in the given range(exclusive)
+
+Input:
+
+4 11
+
+Output:
+
+5 6 7 
+
+Assignment:
+
+Write a program to print twin primes in the given range(inclusive)
+
+Input:
+
+5 19
+
+Output:
+
+5    7
+
+11 13
+
+17 19
+
+Assignment3:
+
+Write a program to print prime number count in between ranges(inclusive)
+
+Input:
+
+4
+
+1 8
+
+2 12
+
+15 25
+
+2 5
+
+Output:
+
+4
+
+5
+
+3
+
+3
+
+Explantion:1 to 8(2,3,5,)
+
+2 to 12(2,3,5,7,11)
+
+15 to 25(17,19,23)
+
+2 to 5(2,3,5)
+
+Do all the above assignments with sieve algorithm approach
