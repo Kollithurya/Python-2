@@ -61,3 +61,322 @@ Explantion:1 to 8(2,3,5,)
 2 to 5(2,3,5)
 
 Do all the above assignments with sieve algorithm approach
+'''
+
+N=10
+
+N=10+1
+
+0  1  2  3  4  5  6  7  8  9  10
+
+1  1  1  1  1  1  1  1  1  1   1
+
+n=11
+
+sieve=[]
+
+for i in range(0,n):
+
+    sieve.append(1)
+
+print(sieve)
+
+#optimal solution1
+
+sieve=[1]*n
+
+print(sieve)
+
+#optimal solution2(list comprehension)
+
+sieve=[1 for i in range(0,n)]
+
+print(sieve)
+
+import math
+
+n=100001
+
+sieve=[1]*n#filling 1 value from 0 to n-1 in sieve list
+
+sieve[0]=0
+
+sieve[1]=0
+
+m=int(math.sqrt(n))
+
+for i in range(2,m+1):
+
+    if sieve[i]==1:
+
+        for j in range(i*i,n,i):#factors of i will fill with 0
+
+            sieve[j]=0
+
+#write a program to print n prime numbers
+
+import math
+
+n=1000001
+
+sieve=[1]*n#filling 1 value from 0 to n-1 in sieve list
+
+sieve[0]=0
+
+sieve[1]=0
+
+m=int(math.sqrt(n))
+
+for i in range(2,m+1):
+
+    if sieve[i]==1:
+
+        for j in range(i*i,n,i):#factors of i will fill with 0
+
+            sieve[j]=0
+
+m=int(input())
+
+l=[]
+
+for i in range(1,m+1):
+
+    if sieve[i]==1:
+
+        l.append(i)
+
+for i in l:
+
+    print(i,end=' ')
+
+#write a program to print count on n prime numbers
+
+import math
+
+n=1000001
+
+sieve=[1]*n#filling 1 value from 0 to n-1 in sieve list
+
+sieve[0]=0
+
+sieve[1]=0
+
+m=int(math.sqrt(n))
+
+for i in range(2,m+1):
+
+    if sieve[i]==1:
+
+        for j in range(i*i,n,i):#factors of i will fill with 0
+
+            sieve[j]=0
+
+m=int(input())
+
+l=[]
+
+for i in range(1,m+1):
+
+    if sieve[i]==1:
+
+        l.append(i)
+
+print(len(l))
+
+#write a program to print sum of 1 to n prime numbers
+
+import math
+
+n=1000001
+
+sieve=[1]*n#filling 1 value from 0 to n-1 in sieve list
+
+sieve[0]=0
+
+sieve[1]=0
+
+m=int(math.sqrt(n))
+
+for i in range(2,m+1):
+
+    if sieve[i]==1:
+
+        for j in range(i*i,n,i):#factors of i will fill with 0
+
+            sieve[j]=0
+
+m=int(input())
+
+l=[]
+
+for i in range(1,m+1):
+
+    if sieve[i]==1:
+
+        l.append(i)
+
+print(sum(l))
+
+#write a program to print range of prime numbers
+
+import math
+
+n=2500001
+
+sieve=[1]*n#filling 1 value from 0 to n-1 in sieve list
+
+sieve[0]=0
+
+sieve[1]=0
+
+m=int(math.sqrt(n))
+
+for i in range(2,m+1):
+
+    if sieve[i]==1:
+
+        for j in range(i*i,n,i):#factors of i will fill with 0
+
+            sieve[j]=0
+
+start,end=map(int,input().split())
+
+s=''
+
+for i in range(start,end+1):#(inclusive first and last values)
+
+    if sieve[i]==1:
+
+        s=s+str(i)+' '
+
+print(s)
+
+#write a program to print twins of primes in the given range
+
+1  20
+
+         2   3   5  7   11  13  17  19
+
+               2   2       2       2
+
+    3,5
+
+    5,7
+
+    11,13
+
+    17,19
+
+'''
+
+import math
+
+def solve(a,b):
+
+    n=2500001
+
+    sieve=[1]*n#filling 1 value from 0 to n-1 in sieve list
+
+    sieve[0]=0
+
+    sieve[1]=0
+
+    m=int(math.sqrt(n))
+
+    for i in range(2,m+1):
+
+        if sieve[i]==1:
+
+            for j in range(i*i,n,i):#factors of i will fill with 0
+
+                sieve[j]=0
+
+    c=0
+
+    for i in range(a,b+1):
+
+        if sieve[i]==1 and sieve[i+2]==1 and b-i>=2:
+
+            c=c+1
+
+    return c
+
+start,end=map(int,input().split())
+
+print(solve(start,end))
+
+'''
+
+a                       b
+
+3 4 5 6 7 8 9 10 11 12 13   15
+
+1 0 1 0 1 0 0  0 1  0   1
+
+                        i
+
+c=3
+
+'''
+
+            
+
+'''
+
+for example:
+
+ step1:
+
+    n=10
+
+    n=n+1
+
+ step2:
+
+    sieve=[1]*n
+
+    0 1 2 3 4 5 6 7 8 9 10
+
+    1 1 1 1 1 1 1 1 1 1  1
+
+ step3,4:
+
+     sieve[0]=0
+
+     sieve[1]=0
+
+    0 1 2 3 4 5 6 7 8 9 10
+
+    0 0 1 1 0 1 0 1 0 0  0
+
+ step5:
+
+     m=int(math.sqrt(n))
+
+     m=int(math.sqrt(11))
+
+     =int(3.333)
+
+     m=3
+
+ step6:
+
+     for i in range(2,m+1):
+
+         repeat step7 from i= 4<4
+
+ step7:
+
+        if sieve[i]==1 go to step8 else goto step6
+
+ step8:
+
+     for j in range(i*i,n,i):
+
+         repeat step9 from i*i to n(j=12<11) else goto step6
+
+ step9:
+
+     fill 0 in sieve[j]
+
+'''
