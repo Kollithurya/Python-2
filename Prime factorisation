@@ -1,0 +1,173 @@
+'''
+
+#prime factorization
+
+n=int(input())#100
+
+c=2#5
+
+while(n!=1):#25!=1
+
+    if n%c==0:
+
+        print(c,end=' ')
+
+        n=n//c#1
+
+    else:
+
+        c=c+1
+
+        
+
+#line by line interpreation
+
+step1:
+
+    n=int(input())
+
+    read n value ,i want to take 55,so n=55
+
+step2:
+
+    c=2(it is first prime)#c=2
+
+step3:
+
+while(n!=1):#55!=1
+
+    if n value is not equal to 1 repeat step4
+
+step4:
+
+    if n value is divided by c goto step 5 else goto step6
+
+    if n%c==0:
+
+step5:
+
+    print c value 
+
+        print(c,end=' ')
+
+        divide n value by c
+
+        n=n//c
+
+step6:
+
+    increment c value by and move to step3
+
+        c=c+1
+
+#optimal solution
+
+import math
+
+n=int(input())
+
+while(n%2==0):
+
+    print(2,end=' ')
+
+    n=n//2      5           25 
+
+for i in range(3,int(math.sqrt(n))+1,2):
+
+    while(n%i==0):
+
+        print(i,end=' ')
+
+        n=n//i#
+
+if n>2:
+
+    print(n)
+
+assignment1:
+
+    write a program to print prime factor count for the given number
+
+input:
+
+    25
+
+output:2(5,5)
+
+assignment2:
+
+    write a program to print sum of all prime factors for the given number
+
+input:
+
+    200
+
+output:
+
+    16(2+2+2+5+5)
+
+assignment3:
+
+    write a program to print sum of all the prime factors of the different
+
+    numbers
+
+input:
+
+    3//no of test cases
+
+    25
+
+    8
+
+    14
+
+output:
+
+    25
+
+    Explanation:
+
+        prime factors for 25 is 5,5 so 5+5=10
+
+        prime factors for 8 is 2 2 2,2+2+2=6
+
+        prime factors for 14 is 2 7,so 2+7=9
+
+        sum of all prime factors is 10+6+9=25
+
+Reference:
+
+    https://www.hackerrank.com/contests/infinitum11/challenges/prime-factorization-2
+
+    
+
+'''
+
+#sum of all prime factors of the given number
+
+import math
+
+n=int(input())
+
+s=0
+
+while(n%2==0):
+
+    s=s+2
+
+    n=n//2    
+
+for i in range(3,int(math.sqrt(n))+1,2):
+
+    while(n%i==0):
+
+        s=s+i
+
+        n=n//i#
+
+if n>2:
+
+    s=s+n
+
+print(s)
