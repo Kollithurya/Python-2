@@ -1,0 +1,293 @@
+'''
+
+WE ARE USING SIEVE ALGORITHM FOR GENERATING PRIMES
+
+PREFIX IS USED FOR RANGE SUM ,MAXIMUM SUB ARRAY SUM,SUB ARRAY PROGRAMS AND
+
+EQUILIBRIUM INDEX
+
+SO
+
+GIVEN NUMBER IS PRIME OR NOT
+
+PRIME COUNT
+
+SUM OF N PRIME NUMBERS
+
+10
+
+2+3+5+7=17
+
+HOW CAN WE FIND THE PRIME NUMBERS SUM IN BETWEEN GIVEN RANGE OR 1 TO N PRIME NUMBERS SUM
+
+WITH ONE PROGRAM
+
+10
+
+17
+
+3   20
+
+3 5 7 11 13 17 19
+
+'''
+
+#prime range sum
+
+import math
+
+n=100001
+
+sieve=[1]*n
+
+x=int(math.sqrt(n))
+
+sieve[0]=0
+
+sieve[1]=0
+
+for i in range(2,x+1):
+
+    if sieve[i]==1:
+
+        for j in range(i*i,n,i):
+
+            sieve[j]=0
+
+pf=[0]*n
+
+for i in range(2,n):
+
+    if sieve[i]==1:
+
+        pf[i]=pf[i-1]+i
+
+    else:
+
+        pf[i]=pf[i-1]
+
+l,r=map(int,input().split())
+
+print(pf[r]-pf[l-1])
+
+#prime range count
+
+import math
+
+n=100001
+
+sieve=[1]*n
+
+x=int(math.sqrt(n))
+
+sieve[0]=0
+
+sieve[1]=0
+
+for i in range(2,x+1):
+
+    if sieve[i]==1:
+
+        for j in range(i*i,n,i):
+
+            sieve[j]=0
+
+pf=[0]*n
+
+for i in range(2,n):
+
+    if sieve[i]==1:
+
+        pf[i]=pf[i-1]+1
+
+    else:
+
+        pf[i]=pf[i-1]
+
+l,r=map(int,input().split())
+
+print(pf[r]-pf[l-1])
+
+Equlibrium index:
+
+    #sub array sum equal to k
+
+#Naive soultion
+
+class Solution:
+
+    def subarraySum(self, nums, k) :
+
+        c=0
+
+        n=len(nums)
+
+        for i in range(0,n):
+
+            s=0
+
+            for j in range(i,n):
+
+                s=s+nums[j]
+
+                if s==k:
+
+                    c=c+1
+
+        return c
+
+#optimal solution
+
+class Solution:
+
+    def subarraySum(self, nums, k) :
+
+        c=0
+
+        n=len(nums)
+
+        pfsum=0
+
+        d={0:1}
+
+        for i in range(0,n):
+
+            pfsum=pfsum+nums[i]
+
+            if pfsum-k in d:
+
+                c=c+d[pfsum-k]
+
+            if pfsum not in d:
+
+                d[pfsum]=1
+
+            else:
+
+                d[pfsum]=d[pfsum]+1
+
+        return c
+
+#sub array sum equal to k
+
+#Naive soultion
+
+class Solution:
+
+    def subarraySum(self, nums, k) :
+
+        c=0
+
+        n=len(nums)
+
+        for i in range(0,n):
+
+            s=0
+
+            for j in range(i,n):
+
+                s=s+nums[j]
+
+                if s==k:
+
+                    c=c+1
+
+        return c
+
+#optimal solution
+
+class Solution:
+
+    def subarraySum(self, nums, k) :
+
+        c=0
+
+        n=len(nums)
+
+        pfsum=0
+
+        d={0:1}
+
+        for i in range(0,n):
+
+            pfsum=pfsum+nums[i]
+
+            if pfsum-k in d:
+
+                c=c+d[pfsum-k]
+
+            if pfsum not in d:
+
+                d[pfsum]=1
+
+            else:
+
+                d[pfsum]=d[pfsum]+1
+
+        return c
+
+#sub array sum divisible by k
+
+#Naive soultion
+
+class Solution:
+
+    def subarraySum(self, nums, k) :
+
+        c=0
+
+        n=len(nums)
+
+        for i in range(0,n):
+
+            s=0
+
+            for j in range(i,n):
+
+                s=s+nums[j]
+
+                if s%k==0:
+
+                    c=c+1
+
+        return c
+
+#optimal solution
+
+class Solution:
+
+    def subarraySum(self, nums, k) :
+
+        c=0
+
+        d={}
+
+        for i in accumulate(nums):
+
+            if i%k==0:
+
+                c=c+1
+
+            if j%k not in d:
+
+                d[j%k]=1
+
+            else:
+
+                c=c+dic[j%k]
+
+                d[j%k]+=1
+
+        return c
+
+Assignment-1:
+
+    https://leetcode.com/problems/subarray-sum-equals-k/description/
+
+Assignment-2:
+
+    https://leetcode.com/problems/subarray-sums-divisible-by-k/description/
+
+Assignment-3:
+
+    https://leetcode.com/problems/subarray-product-less-than-k/description/
