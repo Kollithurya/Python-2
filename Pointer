@@ -1,0 +1,143 @@
+'''
+
+#two pointer approach
+
+0    1  2   3   4   
+
+10 20 30 40 50 
+
+k=70
+
+arr=[10,20,30,40,50]
+
+k=70
+
+n=len(arr)
+
+i=0#1
+
+j=n-1#4
+
+while(i<j):#1<4
+
+    if arr[i]+arr[j]==k:#arr[0]+arr[4]
+
+        print(i,j)
+
+    if arr[i]+arr[j]>k:
+
+        j=j-1
+
+    else:
+
+        i=i+1
+
+'''       
+
+nums=[6,7,3,6,4,6,3,5,6,9]
+
+k=4
+
+result=set()
+
+i=0
+
+j=1
+
+n=len(nums)
+
+nums.sort()
+
+while j<n:
+
+    if nums[j]-nums[i]==k:
+
+        result.add((nums[i],nums[j]))
+
+        i=i+1
+
+        j=i+1
+
+        
+
+    elif nums[j]-nums[i]>k:
+
+        i=i+1
+
+        j=j+1
+
+    else:
+
+        j=j+1
+
+print(len(result))
+
+6,7,3,6,4,6,3,5,6,9
+
+3 3 4 5 6 6 6 6 7 9
+
+      i                     j
+
+4
+
+1
+
+class Solution:
+
+    def findPairs(self, nums: List[int], k: int) -> int:
+
+        result=set()
+
+        i=0
+
+        j=1
+
+        n=len(nums)
+
+        nums.sort()
+
+        while j<n:
+
+            if nums[j]-nums[i]==k:
+
+                result.add((nums[i],nums[j]))
+
+                i=i+1
+
+                j=i+1
+
+            elif nums[j]-nums[i]>k:
+
+                i=i+1
+
+                j=j+1
+
+            else:
+
+                j=j+1
+
+        return len(result)
+
+     0  1  2  3  4
+
+     1  1  3  4  5
+
+               i     j
+
+     k=2
+
+     0 2
+
+     2 4
+
+ass1:
+
+https://leetcode.com/problems/two-sum/
+
+ass2:
+
+https://leetcode.com/problems/k-diff-pairs-in-an-array/description/?orderBy=most_votes
+
+ass3:
+
+https://practice.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1
