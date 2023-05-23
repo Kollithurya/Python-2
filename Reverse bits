@@ -1,0 +1,81 @@
+'''
+
+Reverse bits:
+
+class Solution:
+
+    def reverseBits(self, n: int) -> int:
+
+        res=0
+
+        for i in range(0,31):
+
+            if (n&1==1):
+
+                res=res+1
+
+            n=n>>1#it move bits towards right side
+
+            res=res<<1#it moves bits towards left side
+
+        return res+(n&1)
+
+        
+
+      
+
+#gcd of two numbers
+
+a=int(input())
+
+b=int(input())
+
+l=[]
+
+c=[]
+
+for i in range(1,a+1):
+
+    if a%i==0:
+
+        l.append(i)
+
+for j in range(1,b+1):
+
+    if b%j==0:
+
+        if j in l:
+
+            c.append(j)
+
+print(max(c))
+
+'''
+
+#Eucledean algorithm:
+
+def gcd(a,b):
+
+    if a==0:
+
+        return b
+
+    return gcd(b%a,a)
+
+a=int(input())
+
+b=int(input())
+
+print(gcd(a,b))
+
+assignment1:
+
+    https://leetcode.com/problems/reverse-bits/
+
+assignment-2:
+
+    https://leetcode.com/problems/number-of-1-bits/
+
+assignment-3:
+
+    https://practice.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1
