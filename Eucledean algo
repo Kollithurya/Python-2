@@ -1,0 +1,99 @@
+'''
+
+Extended Eucledean algorithm
+
+ax+by=gcd(a,b)
+
+a=30
+
+b=20
+
+30x+20y=gcd(30,20)
+
+30x+20y=10
+
+30(1)+20(-1)=10
+
+x=1 y=-1 gcd=10
+
+1 2 3 5 6 10 15 30
+
+1 2 4 5 10 20
+
+1 2 5 10
+
+10
+
+def gcdextended(a,b):#0,10
+
+    if a==0:
+
+        return b,0,1
+
+    gcd,x1,y1=gcdextended(b%a,a)#20%10,10
+
+    x=y1-(b//a)*x1
+
+    y=x1
+
+    return gcd,x,y
+
+    
+
+a=int(input())#30
+
+b=int(input())#20
+
+gcd,x,y=gcdextended(a,b)
+
+print(gcd,x,y)
+
+PERMUTATIONS:
+
+    ABC
+
+    A  B    C
+
+    ACB
+
+    BAC
+
+    BCA
+
+    
+
+    CBA
+
+    CAB
+
+                                                             A     B       C
+
+            A B C                            BAC                           CAB
+
+            A C B                            BCA                           CBA
+
+'''
+
+from itertools import permutations
+
+s=input()
+
+p=permutations(s)
+
+m=[]
+
+for i in list(p):
+
+    x=list(i)
+
+    s=''
+
+    for j in x:
+
+        s=s+j
+
+    m.append(s)
+
+for i in m:
+
+    print(i,end=' ')
